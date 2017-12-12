@@ -24,6 +24,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# To create a lot of users at once. Delete Before submission
+gem 'faker',          '1.7.3'
+
+# To group information into pages
+gem 'will_paginate',           '3.1.6'
+gem 'bootstrap-will_paginate', '1.0.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
