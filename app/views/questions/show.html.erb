@@ -1,2 +1,7 @@
-<h2><%= @question.title %></h2>
+<h3><%= @question.title %></h3>
 <p><%= @question.body %></p>
+
+<br></br> <%= render 'comments/comments' %> <br></br>
+<%= render 'comments/form' %>
+
+
