@@ -3,7 +3,7 @@
      <div class="A question">
      <h3><%= question.title %></h3>
      <p><%= truncate(question.body,length: 150) %></p>
-     Published <%= time_ago_in_words(question.created_at) %> ago by <%= question.user.name %>
+      <font color="blue"> Published <%= time_ago_in_words(question.created_at) %> ago by <%= question.user.name %>  </font>
      <%= link_to "Read More" , question_path(question),:class => 'btn btn-default' %>
      
      </div>
