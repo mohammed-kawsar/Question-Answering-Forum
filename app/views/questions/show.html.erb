@@ -1,7 +1,21 @@
 <h3><%= @question.title %></h3>
 <p><%= @question.body %></p>
 
-<br></br> <%= render 'comments/comments' %> <br></br>
-<%= render 'comments/form' %>
+<p><u>Comments</u></p>
+ <% @question.comments.each do |comment| %>
+     <div class="A comment">
+         <p><strong><%= comment.body %></strong> <%= link_to '[X]', [comment.question,comment], method: :delete, data: { confirm: 'Are you sure?'} %>
+         </p>
+     </div>
+ <%end%> 
 
 
+<h2>Add Comment</h2>
+ <%= form_for([@question, @question.comments.build]) do |f| %>
+     <p>
+         <%= f.text_area :body %>
+     </p>
+     <p>
+         <%= f.submit :Submit %>
+     </p>
+ <%end%> 
