@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :users
-  resources :questions
+  resources :questions do 
+    resources :comments
+  end
 
   root 'questions#index'
   
