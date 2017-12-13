@@ -1,9 +1,13 @@
-<p><u>Comments</u></p>
+<p> <%= @question.comments.count %> <u>Comments</u></p>
  <% @question.comments.each do |comment| %>
-     <div class="A comment">
-         <p>
-          <strong><%= comment.body %></strong> <%= link_to '[X]', [comment.question,comment], method: :delete, data: { confirm: 'Are you sure?'} %>
-         </p>
-         <p>Posted by <strong><%= link_to current_user.name, current_user%></strong> at <%= comment.user.created_at.strftime("%Y-%m-%d  %H:%M") %></p>
+     <div class="commentStyle">
+
+         <%= comment.body %>
+
+         </br>  
+         </br> 
+         Posted by <strong><%= link_to comment.user.name %></strong> at <%= comment.user.created_at.strftime("%Y-%m-%d  %H:%M") %>
+         <%= link_to 'Delete', [comment.question,comment], method: :delete, data: { confirm: 'Are you sure?'} %>
+        
      </div>
  <%end%> 
