@@ -1,15 +1,30 @@
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
+User.create!(name:  "Alex",
+             email: "alex@agile.com",
              password:              "foobar",
              password_confirmation: "foobar",
              admin: true)
+             
+User.create!(name:  "Mohaamed",
+             email: "mohammed@agile.com",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             admin: false)
+             
+User.create!(name:  "Wonjoon",
+             email: "wonjoon@agile.com",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             admin: false)
 
-99.times do |n|
-  name  = Faker::Name.name
-  email = "example-#{n+1}@railstutorial.org"
-  password = "password"
-  User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password)
+User.create!(name:  "Jakub",
+             email: "jakub@agile.com",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             admin: false)
+             
+User.create!(name:  "Dara",
+             email: "dara@agile.com",
+             password:              "foobar",
+             password_confirmation: "foobar",
+             admin: false)
 end
