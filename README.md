@@ -50,6 +50,7 @@ Version Beta.9001 (just 'over nine thousends')
 3. **Wonjoon Seol** - *Questions functionality, report* - 
 4. **Alex Franch Tapia** - *User and user authentication, tests* - 
 5. **Dario-Dara Alizade** :zzz: - *NOTHING* - :sleeping: no contribution to project but "one test case" which was not included in project anyway
+
 ## License
 
 This project is licensed under "Ask-Us-If-You-Want-To-Use-It" license.
