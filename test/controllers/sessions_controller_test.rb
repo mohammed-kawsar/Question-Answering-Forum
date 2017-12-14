@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class SessionsControllerTest < ActionController::TestCase
-  test "should get new" do
+  
+  test "new login" do
     get :new
     assert_response :success
   end

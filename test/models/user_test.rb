@@ -51,8 +51,6 @@ class UserTest < ActiveSupport::TestCase
     assert_not user2.valid?
   end
   
-
-  
   # Name Tests
   test "test name presence" do
     @user.name = ""
