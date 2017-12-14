@@ -1,5 +1,5 @@
 <h1>Question</h1>
-<%= form_for :question, url: questions_path, method: :patch do |form| %>
+<%= form_for :question, url: question_path(@question), method: :patch do |form| %>
     <p>
         <%= form.label :title %>
         <%= form.text_field :title %>
