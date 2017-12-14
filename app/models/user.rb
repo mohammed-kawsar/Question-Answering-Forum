@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :questions,  dependent: :destroy
-  #has_many :comments
+  has_many :comments
   
   before_save { self.email = email.downcase }
   validates :name, presence:true, length: {maximum: 50}

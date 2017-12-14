@@ -1,0 +1,7 @@
+<p><u>Comments</u></p>
+ <% @question.comments.each do |comment| %>
+     <div class="A comment">
+         <p><strong><%= comment.body %></strong> <%= link_to '[X]', [comment.question,comment], method: :delete, data: { confirm: 'Are you sure?'} %>
+         </p>
+     </div>
+ <%end%> 
