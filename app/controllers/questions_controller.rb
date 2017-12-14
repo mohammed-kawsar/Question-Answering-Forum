@@ -10,8 +10,12 @@ class QuestionsController < ApplicationController
     def create
         # render plain: params[:question].inspect
         @question = current_user.questions.build(question_params)
-        @question.save
-        redirect_to @question
+        
+        if @question.save
+            redirect_to @question
+        else
+            render 'new'
+        end
     end
     
     def show
