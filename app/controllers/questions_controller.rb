@@ -1,6 +1,9 @@
 class QuestionsController < ApplicationController
+    before_action :logged_in_user, only: [:create, :destroy]
+
+
     def index
-        @questions = Question.all
+        @question = current_user.questions.build if logged_in?
     end
     
     def new
@@ -8,12 +11,19 @@ class QuestionsController < ApplicationController
     end
     
     def create
-        # render plain: params[:question].inspect
-        @question = Question.new(question_params)
-        @question.save
-        redirect_to @question
+        @question = current_user.quiestions.build(question_params)
+        if @micropost.save
+          flash[:success] = "You have created a new question successfully."
+          redirect_to root_url
+        else
+          render root_url
+        end
     end
     
+    def destroy
+        
+    end
+
     def show
         @question = Question.find(params[:id])
     end
