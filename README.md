@@ -6,13 +6,11 @@ We aim to included many of the functionalities that can be find in Stack Overflo
 Users can sign up, and then ask question, all logged in users are able to comment any question.
 
 ##Team name:
-*Dandelion*
+
+**_Dandelion_**
 
 
-
-A README.md that contains a link to URL where the web application is deployed by Heroku. The file should also state the name of your team and the members of your team. If you have reused any code or used any APIs, these must be listed here and attributed, along with a short description as to what functionality that code/API provides. Update 5/12/2017: Although all required deliverables are specified in this document, if there is any additional information you wish to provide with your submission, this should be included here. If the additional information is substantial, you may create a Wiki in your GitHub repository, but you should specify that in README.md.
-
-## Getting Started
+## Link to Huroku 
 
 Our project is located here: XXXXXXXXXX LINK XXXXXXXXX
 
@@ -32,24 +30,31 @@ rake test
 * [cloud9](http://cloud9.gg) - Cloud9 IDE is an online integrated development environment, published as open source from version 3.0. It supports hundreds of programming languages, including C, C++, PHP, Ruby, Perl, Python, JavaScript with Node.js, and Go.
 * [Git](https://github.kcl.ac.uk/) - Git for version control
 
+## Tool and gems used
+* **bootstrap** - for buttons style
+* **coffee-rails** - for buttons style
+* **sass-rail** -  for stylesheets SCSS
+* **bcrypt** - for secure password
+
+
 ## Versioning
 
-Version Beta.9001 (just over nine thousend)
+Version Beta.9001 (just 'over nine thousends')
 
 ## Authors
 
-* **Jakub Jeziorski** - *Comments functionality, styling, readme,* - 
-* **Mohammed Kawsar** - *Comments functionality, report* - 
-* **Wonjoon Seol** - *Questions functionality, report* - 
-* **Alex Franch Tapia** - *User and user authentication, tests* - 
-* **Dario-Dara Alizade** - *NOTHING* - no contribution to project but "one test case" which was not included in project anyway
-
+1. **Jakub Jeziorski** - *Comments functionality, styling, readme,* - 
+2. **Mohammed Kawsar** - *Comments functionality, report* - 
+3. **Wonjoon Seol** - *Questions functionality, report* - 
+4. **Alex Franch Tapia** - *User and user authentication, tests* - 
+5. **Dario-Dara Alizade** :zzz: - *NOTHING* - :sleeping: no contribution to project but "one test case" which was not included in project anyway
 ## License
 
 This project is licensed under "Ask-Us-If-You-Want-To-Use-It" license.
 
-## Acknowledgments
+## Acknowledgments and thanks to:
 
-Google
-YouTube tutorials
-
+- Google
+- YouTube tutorials
+- StackOverFlow
+- www.railstutorial.org and tutorials by Michael Hartl
