@@ -1,5 +1,12 @@
 class CommentsController < ApplicationController
-    before_action :logged_in_user, only: [:create, :destroy]
+before_action :correct_user, only: [:edit, :update, :destroy]
+
+def correct_user
+    @comment = Comment.find_by(id: params[:id])
+    unless current_user?(@comment.user)
+      redirect_to user_path(current_user)
+    end
+end
     
     def create
      
