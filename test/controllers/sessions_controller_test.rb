@@ -1,9 +1,9 @@
 require 'test_helper'
 
-class UsersControllerTest < ActionDispatch::IntegrationTest
-
+class SessionsControllerTest < ActionController::TestCase
   test "should get new" do
-    get signup_path
+    get :new
     assert_response :success
   end
+
 end
