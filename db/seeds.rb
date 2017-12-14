@@ -27,4 +27,4 @@ User.create!(name:  "Dara",
              password:              "foobar",
              password_confirmation: "foobar",
              admin: false)
-end
+             
