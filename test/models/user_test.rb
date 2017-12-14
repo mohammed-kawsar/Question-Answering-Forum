@@ -29,7 +29,7 @@ class UserTest < ActiveSupport::TestCase
     end
   end
   
-  test "test for invalid addresses" do
+  test " invalid addresses" do
     invalid_addresses = %w[mohammed@ jakub.jez@jake,sje alex alex.alex.alex@gmail.com,se ]
     invalid_addresses.each do |invalid_address|
       @user.email = invalid_address
@@ -37,8 +37,8 @@ class UserTest < ActiveSupport::TestCase
     end
   end
   
-  test "emails should be saves as lower case" do
-    testedEmail = "Foo@ExAMPle.CoM"
+  test "test emails should be saves as lower case" do
+    testedEmail = "PaeLLa@MediTerraNiA.COM"
     @user.email = testedEmail
     @user.save
     assert_equal testedEmail.downcase, @user.reload.email
@@ -64,21 +64,17 @@ class UserTest < ActiveSupport::TestCase
     assert_not @user.valid?
   end
 
-
-
+  # Passwords Test
   
-
-  
- 
-  
-   test "password should be present (nonblank)" do
-    @user.password = @user.password_confirmation = " " * 6
+  test "test password is larger than 6 characters" do
+    @user.password = "a" * 5
+    @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
 
-  test "password should have a minimum length" do
-    @user.password = @user.password_confirmation = "a" * 5
+  test "test there is a password" do
+    @user.password = " " * 6
+    @user.password_confirmation = " " * 6
     assert_not @user.valid?
   end
-  
 end
