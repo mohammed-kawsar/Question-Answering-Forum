@@ -2,27 +2,26 @@ class CommentsController < ApplicationController
 before_action :correct_user, only: [ :destroy]
 before_action :logged_in_user, only: [:create]
 
-def correct_user
-    @comment = Comment.find_by(id: params[:id])
-    unless current_user?(@comment.user)
-      redirect_to user_path(current_user)
+    def correct_user
+        @comment = Comment.find_by(id: params[:id])
+        unless current_user?(@comment.user)
+          redirect_to user_path(current_user)
+        end
     end
-end
     
     def create
-     
-     @question = Question.find(params[:question_id])
-     @comment = @question.comments.create(comment_params)
-     @comment.user_id = current_user.id
-     @comment.save
-     redirect_to question_path(@question)
+         @question = Question.find(params[:question_id])
+         @comment = @question.comments.create(comment_params)
+         @comment.user_id = current_user.id
+         @comment.save
+         redirect_to question_path(@question)
     end
      
     def destroy
-     @question = Question.find(params[:question_id])
-     @comment = @question.comments.find(params[:id])
-     @comment.destroy
-     redirect_to question_path(@question)
+         @question = Question.find(params[:question_id])
+         @comment = @question.comments.find(params[:id])
+         @comment.destroy
+         redirect_to question_path(@question)
     end
  
     private def comment_params
