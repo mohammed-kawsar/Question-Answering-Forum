@@ -14,10 +14,10 @@ lana:
   email: hands@example.gov
   password_digest: <%= User.digest('password') %>
 
-malory:
-  name: Malory Archer
-  email: boss@example.gov
-  password_digest: <%= User.digest('password') %>
+theRock:
+  name: The Rock
+  email: stone@marble.hard
+  password_digest: <%= User.digest('letitgoletitgo') %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
