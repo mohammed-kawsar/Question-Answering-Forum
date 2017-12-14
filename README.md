@@ -30,11 +30,13 @@ rake test
 * [cloud9](http://cloud9.gg) - Cloud9 IDE is an online integrated development environment, published as open source from version 3.0. It supports hundreds of programming languages, including C, C++, PHP, Ruby, Perl, Python, JavaScript with Node.js, and Go.
 * [Git](https://github.kcl.ac.uk/) - Git for version control
 
-## Tool and gems used
+## Modules and gems used
 * **bootstrap** - for buttons style
 * **coffee-rails** - for buttons style
 * **sass-rail** -  for stylesheets SCSS
 * **bcrypt** - for secure password
+* **Digest** - for encrypting password
+
 
 
 ## Versioning
