@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
     before_action :logged_in_user, only: [:create]
-    before_action :correct_user, only: [:edit, :update, :destroy]
+
  
     def correct_user
      @comment = Comment.find_by(id: params[:id])
@@ -30,7 +30,7 @@ class QuestionsController < ApplicationController
     def destroy
         @question = Question.find(params[:id])
         @question.destroy
-        redirect_to @question_path
+        redirect_to questions_path
     end
 
     def update
