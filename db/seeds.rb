@@ -28,9 +28,3 @@ User.create!(name:  "Dara",
              password_confirmation: "foobar",
              admin: false)
              
-users = User.order(:created_at).take(5)
-50.times do
-  body = Faker::Lorem.sentence(5)
-  title = Faker::Lorem.sentence(2)
-  users.each { |user| user.questions.create!(body: body,title: title) }
-end

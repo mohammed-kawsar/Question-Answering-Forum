@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 20171212200112) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
   end
 
   add_index "questions", ["user_id", "created_at"], name: "index_questions_on_user_id_and_created_at"

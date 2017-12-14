@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
 
 
     def index
-        @question = current_user.questions.build if logged_in?
+        @questions = Question.all
     end
     
     def new
@@ -11,7 +11,7 @@ class QuestionsController < ApplicationController
     end
     
     def create
-        @question = current_user.quiestions.build(question_params)
+        @question = current_user.questions.build(question_params)
         if @question.save
           flash[:success] = "You have created a new question successfully."
           redirect_to root_url

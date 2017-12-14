@@ -1,21 +1,9 @@
-<% if logged_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-      <section class="question_form">
-        <%= render 'shared/question_form' %>
-      </section>
-    </aside>
-  </div>
-<% else %>
 <h1>Question Answering Forum</h1>
  <% @questions.each do |question| %>
      <div class="A question">
      <h3><%= question.title %></h3>
      <p><%= truncate(question.body,length: 150) %></p>
-      <font color="blue"> Published <%= time_ago_in_words(question.created_at) %> ago by <%= question.user.name %>  </font>
+      <font color="blue"> Published <%= time_ago_in_words(question.created_at) %> ago by <%= link_to question.user.name, question.user %>  </font>
      <%= link_to "Read More" , question_path(question),:class => 'btn btn-default' %>
      
      </div>
