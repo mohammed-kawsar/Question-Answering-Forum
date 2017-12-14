@@ -1,4 +1,7 @@
 class QuestionsController < ApplicationController
+    before_action :logged_in_user, only: [:create, :destroy]
+
+
     def index
         @questions = Question.all
     end
@@ -8,16 +11,19 @@ class QuestionsController < ApplicationController
     end
     
     def create
-        # render plain: params[:question].inspect
         @question = current_user.questions.build(question_params)
-        
         if @question.save
-            redirect_to @question
+          flash[:success] = "You have created a new question successfully."
+          redirect_to root_url
         else
-            render 'new'
+          render root_url
         end
     end
     
+    def destroy
+        
+    end
+
     def show
         @question = Question.find(params[:id])
     end
