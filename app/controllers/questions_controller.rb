@@ -1,6 +1,13 @@
 class QuestionsController < ApplicationController
     before_action :logged_in_user, only: [:create]
     before_action :correct_user, only: [:edit, :update, :destroy]
+ 
+    def correct_user
+     @comment = Comment.find_by(id: params[:id])
+        unless current_user?(@comment.user)
+     redirect_to user_path(current_user)
+        end
+    end
 
     def index
         @questions = Question.all
@@ -23,14 +30,14 @@ class QuestionsController < ApplicationController
     def destroy
         @question = Question.find(params[:id])
         @question.destroy
-        redirect_to questions_path
+        redirect_to @question_path
     end
 
     def update
         @question = Question.find(params[:id])
         if @question.update(question_params)
           flash[:success] = "You have created a new question successfully."
-          redirect_to root_url
+          redirect_to @question
         else
           render 'edit'
         end        
@@ -44,10 +51,6 @@ class QuestionsController < ApplicationController
         @question = Question.find(params[:id])
     end
     
-    def correct_user
-      @question = current_user.questions.find_by(id: params[:id])
-      redirect_to root_url if @micropost.nil?
-    end
     
     private def question_params
         params.require(:question).permit(:title, :body)
