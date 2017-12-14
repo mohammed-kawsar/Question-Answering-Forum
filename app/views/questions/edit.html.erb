@@ -1,0 +1,13 @@
+<h1>Question</h1>
+<%= form_for :question, url: questions_path, method: :patch do |form| %>
+    <p>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+    </p>
+    <p>
+        <%= form.text_area :body %>
+    </p>
+    <p>
+        <%= form.submit :Submit %>
+    </p>
+<% end %>
