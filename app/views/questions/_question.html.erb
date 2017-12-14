@@ -5,5 +5,15 @@
   <span class="body"><%= question.body %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(question.created_at) %> ago.
+  
+<% if (current_user?(question.user) %>
+<%= link_to "Edit", edit_question_path(@question), :class => 'btn btn-default' %>
+<%= link_to "Delete", question_path(@question), 
+                method: :delete,
+                data: {confirm: 'Are you sure ?'},
+                :class => 'btn btn-danger'%>
+  
+  
+<% end %>
   </span>
 </li>
