@@ -1,9 +1,11 @@
-<h2>Add Comment</h2>
+<h2>Add New Comment</h2>
  <%= form_for([@question, @question.comments.build]) do |f| %>
+     <div class="commentStyle">
      <p>
          <%= f.text_area :body %>
      </p>
      <p>
-         <%= f.submit :Submit %>
+         <%= f.submit :Submit, :class => 'btn btn-default'  %>
      </p>
+     </div>
  <%end%> 
