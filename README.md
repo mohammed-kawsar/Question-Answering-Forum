@@ -12,7 +12,7 @@ Users can sign up, and then ask question, all logged in users are able to commen
 
 ## Link to Huroku 
 
-Our project is located here: https://pure-meadow-53529.herokuapp.com/
+Our project is located here: https://shrouded-inlet-40914.herokuapp.com/
 
 ## Running the tests
 
