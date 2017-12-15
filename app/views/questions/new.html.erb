@@ -1,5 +1,6 @@
-<h1>Question</h1>
+<h1>Add New Question</h1>
 <%= form_for :question, url: questions_path do |form| %>
+    <div class="commentStyle">
     <p>
         <%= form.label :title %>
         <%= form.text_field :title %>
@@ -8,6 +9,7 @@
         <%= form.text_area :body %>
     </p>
     <p>
-        <%= form.submit :Submit %>
+        <%= form.submit :Submit,:class => 'btn btn-default' %>
     </p>
+     </div>
 <% end %>

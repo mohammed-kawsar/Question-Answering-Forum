@@ -6,7 +6,7 @@
 
          </br>  
          </br> 
-         Posted by <strong><%= link_to comment.user.name, comment.user %></strong> at <%= comment.user.created_at.strftime("%Y-%m-%d  %H:%M") %>
+         Posted by <strong><font color="#95B8C4"><%= link_to comment.user.name, comment.user %></font></strong> at <%= comment.user.created_at.strftime("%Y-%m-%d  %H:%M") %>
          
         <% if current_user?(comment.user) %>
           <%= link_to 'Delete', [comment.question,comment], method: :delete, data: { confirm: 'Are you sure?'} %>

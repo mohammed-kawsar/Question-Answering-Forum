@@ -1,0 +1,15 @@
+Thu, 14 Dec 2017 22:42:33 +0000
+README.rdoc	Tue, 12 Dec 2017 12:54:52 +0000
+app/controllers/application_controller.rb	Thu, 14 Dec 2017 18:49:53 +0000
+app/controllers/comments_controller.rb	Thu, 14 Dec 2017 18:54:48 +0000
+app/controllers/questions_controller.rb	Thu, 14 Dec 2017 20:26:29 +0000
+app/controllers/sessions_controller.rb	Tue, 12 Dec 2017 12:54:52 +0000
+app/controllers/users_controller.rb	Thu, 14 Dec 2017 18:54:48 +0000
+app/helpers/application_helper.rb	Tue, 12 Dec 2017 12:54:52 +0000
+app/helpers/comments_helper.rb	Tue, 12 Dec 2017 14:02:40 +0000
+app/helpers/questions_helper.rb	Tue, 12 Dec 2017 12:54:52 +0000
+app/helpers/sessions_helper.rb	Thu, 14 Dec 2017 20:08:26 +0000
+app/helpers/users_helper.rb	Tue, 12 Dec 2017 12:54:52 +0000
+app/models/comment.rb	Wed, 13 Dec 2017 22:39:38 +0000
+app/models/question.rb	Thu, 14 Dec 2017 17:51:48 +0000
+app/models/user.rb	Thu, 14 Dec 2017 17:51:48 +0000

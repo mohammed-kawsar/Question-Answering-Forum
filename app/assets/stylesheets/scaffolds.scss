@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #424B54;
+  color: #E2E2E2;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -12,7 +12,29 @@ body {
   border-radius: 5px;
   border: 2px solid #C6D0DE;
   padding: 10px; 
+  color: black;
+  & a {
+    color: #355b68
+  }
 }
+.question {
+  margin-top: 4px;
+  background-color: #2F4550;
+  background:rgba(0,0,0,0.4);
+  border-radius: 5px;
+  border: 2px solid #2F4550;
+  padding: 8px; 
+}
+.questionNew {
+  margin-top: 4px;
+  background-color: #2F4550;
+  background:rgba(0,0,0,0.4);
+  border-radius: 5px;
+  border: 2px solid #2F4550;
+  padding: 8px; 
+  color: #355b68
+}
+
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -27,15 +49,15 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #95B8C4;
 
   &:visited {
-    color: #666;
+    color: #95B8C4;
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #EBF2F4;
+
   }
 }
 

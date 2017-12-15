@@ -1,9 +1,9 @@
-<h1>Question Answering Forum</h1>
+<h1>Ask your question on the Awkward Stack.</h1>
  <% @questions.each do |question| %>
-     <div class="A question">
+     <div class="question"> 
      <h3><%= question.title %></h3>
      <p><%= truncate(question.body,length: 150) %></p>
-      <font color="blue"> Published <%= time_ago_in_words(question.created_at) %> ago by <%= link_to question.user.name, question.user %>  </font>
+      <font color="#E2E2E2"> Published <%= time_ago_in_words(question.created_at) %> ago by <%= link_to question.user.name, question.user %>  </font>
      <%= link_to "Read More" , question_path(question),:class => 'btn btn-default' %>
      
      </div>
