@@ -75,4 +75,14 @@ class UserTest < ActiveSupport::TestCase
     @user.password_confirmation = " " * 6
     assert_not @user.valid?
   end
+  
+  # Question tests
+  
+    test "user's questions have to also be deleted when we delete user" do
+    @user.save
+    @user.questions.create!(title: "Where is manuel?", body: "In Gibraltar.")
+    assert_difference 'Question.count', -1 do
+      @user.destroy
+    end
+  end
 end
