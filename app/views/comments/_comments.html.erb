@@ -1,9 +1,7 @@
 <p> <%= @question.comments.count %> <u>Comments</u></p>
  <% @question.comments.each do |comment| %>
      <div class="commentStyle">
-
          <%= comment.body %>
-
          </br>  
          </br> 
          Posted by <strong><font color="#95B8C4"><%= link_to comment.user.name, comment.user %></font></strong> at <%= comment.user.created_at.strftime("%Y-%m-%d  %H:%M") %>
