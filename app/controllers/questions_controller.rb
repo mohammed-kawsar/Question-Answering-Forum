@@ -3,8 +3,8 @@ class QuestionsController < ApplicationController
     before_action :logged_in_user, only: [:create]
 
     def correct_user
-     @comment = Comment.find_by(id: params[:id])
-        unless current_user?(@comment.user)
+     @question = Question.find_by(id: params[:id])
+        unless current_user?(@question.user)
      redirect_to user_path(current_user)
         end
     end
