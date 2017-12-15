@@ -2,7 +2,6 @@ class QuestionsController < ApplicationController
 
     before_action :logged_in_user, only: [:create]
 
- 
     def correct_user
      @comment = Comment.find_by(id: params[:id])
         unless current_user?(@comment.user)
