@@ -1,9 +1,29 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  title: MyString
-  body: MyText
-
+  title: "How are you today?"
+  body: "I was just wondering if you had a good day."
+  created_at: <%= 55.minutes.ago %>
+  user: theRock
+  
 two:
-  title: MyString
-  body: MyText
+  title: "When's the new Star Wars out?"
+  body: "I think it was the 15th but I'm not too sure."
+  created_at: <%= 2.minutes.ago %>
+  user: theRock
+  
+three:
+  title: "How much does the Tesla Roadster cost?"
+  body: "I've done my research but I can't find info anywhere."
+  created_at: <%= 120.minutes.ago %>
+  user: theRock
+  
+most_recent:
+  title: "Where's Wally?"
+  body: "I lost him in Budapest."
+  created_at: <%= Time.zone.now %>
+  user: theRock
+  
+five:
+  title: "Say waaa?"
+  body: "Yup."
+  created_at: <%= 14.minutes.ago %>
+  user: bigShaq
